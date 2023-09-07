@@ -2,7 +2,8 @@ import React from 'react';
 
 const Form = () => {
   return (
-    <form className="max-w-md mx-auto p-4 mt-20" id="form-section">
+    <div className="mx-auto flex flex-col md:flex-row items-left bg-cover bg-top h-1/2" style={{ backgroundImage: 'url("IMG_4966.JPG")' }}>
+    <form className="md:w-1/2 max-w-md mx-auto p-4 mt-20" id="form-section" >
         <h2 className="navbar-font text-5xl font-bold mb-4">The new you is just a click away</h2>
       <div className="mb-4">
         <label className="block text-gray-700 text-sm font-bold mb-2 mt-10" htmlFor="name">
@@ -64,6 +65,8 @@ const Form = () => {
         </button>
       </div>
     </form>
+    <div className="w-1/2"></div>
+    </div>
   );
 };
 
