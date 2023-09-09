@@ -3,7 +3,7 @@ import Testimonials from './Testimonials';
 
 const Intro= () => {
   return (
-    <section className="bg-white">
+    <section id="Home" className="bg-white">
       <div className="relative bg-cover bg-top h-screen" style={{ backgroundImage: 'url("cover.jpg")' }}>
         <div className="absolute top-80 left-20 sm:left-0 sm-top:40 sm:w-1/3 text-white text-3xl font-bold p-8 w-2/3">
             I'm Dylan Blake, and I help men become high value.
@@ -31,7 +31,7 @@ const Intro= () => {
         </div>
       </div>
       <Testimonials />
-      <div className="container mx-auto flex flex-col md:flex-row items-center">
+      <div id="About" className="container mx-auto flex flex-col md:flex-row items-center">
       <div className="md:w-1/2 mt-6 md:mt-0">
           {/* Image */}
           <img
