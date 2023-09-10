@@ -4,7 +4,7 @@ const Testimonials = () => {
 
   const [expanded, setExpanded] = useState(false);
 
-  // Testimonials data (replace with your actual data)
+  // Testimonials data
   const testimonials = [
     { id: 1, text: 'Vestibulum vehicula feugiat leo, a rhoncus libero.' + 
     'Nulla facilisi. Duis consectetur commodo felis, vel fermentum urna aliquet sitamet.', img: 'IMG_4960.JPG'},
@@ -33,7 +33,7 @@ const Testimonials = () => {
 
 
   return (
-    <section id="Testimonials" className="bg-gray-300 py-16">
+    <section id="Testimonials" className="bg-gray-300 py-20">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold mb-8">Testimonials</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
