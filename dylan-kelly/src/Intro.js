@@ -23,12 +23,17 @@ const Intro= () => {
       <div className="container mx-auto flex flex-col md:flex-row items-center">
         <div className="md:w-1/2">
           {/* Title */}
-          <h2 className="mt-4 text-3xl font-bold mb-4">Welcome to Our Website</h2>
+          <h2 className="mt-4 text-5xl font-bold mb-4">You deserve to be seen!</h2>
 
           {/* Paragraph */}
-          <p className="text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nunc
-            quis libero congue iaculis. Phasellus scelerisque nunc eu aliquam.
+          <p className="text-gray-600 mt-8 text-2xl">
+          Most men are invisible to the world, to their peers, and of course beautiful women. They blend into the back ground and settle for a life they hate waking up to.  
+          </p>
+          <p className="text-gray-600 mt-4 text-2xl">
+          I’ve been that man and have made it my life’s mission to help men just like you become irresistible. That when you walk into a room women notice, respect, and admire you as someone of high value. 
+          </p>
+          <p className="text-gray-600 mt-4 text-2xl">
+          It’s time to become the man you always knew you were capable of becoming. 
           </p>
           <button
           className="bg-gray-500 mt-8 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"

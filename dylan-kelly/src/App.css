@@ -47,9 +47,13 @@
   background-color: #DAAD44;
 }
 
+.custom-text-color {
+  color: #DAAD44;
+}
+
 .navbar-font {
   font-family: 'Montserrat', Calibri, Arial;
-  color:#DAAD44;
+  color:#000000;
 }
 
 .intro-font {
