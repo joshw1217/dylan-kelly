@@ -1,6 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Alert from './Alert';
 
 const Form = () => {
+  const [isAlertVisible, setAlertVisible] = useState(false);
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    // Perform form submission logic here
+
+    // Show the alert after form submission
+    setAlertVisible(true);
+  };
+
+  const handleAlertClose = () => {
+    setAlertVisible(false);
+  };
+
+
   return (
     <div className="mx-auto flex flex-col md:flex-row items-left bg-cover bg-top h-1/2" style={{ backgroundImage: 'url("IMG_4966.JPG")' }}>
     <form className="md:w-1/2 max-w-md mx-auto p-4 mt-20" id="form-section" >
@@ -97,12 +114,19 @@ const Form = () => {
         <button
           className="custom-navbar-button hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           type="submit"
+          onClick={handleFormSubmit}
         >
           Get in touch
         </button>
       </div>
     </form>
-     <div className="w-1/2"></div>
+     <div className="flex justify-center items-end max-height mb-20 md:w-1/2 md:ml-0 ml-4">
+     {isAlertVisible && (
+          <Alert 
+          message="Form submitted successfully!" 
+          onClose={handleAlertClose} />
+        )}
+     </div>
     </div>
   );
 };

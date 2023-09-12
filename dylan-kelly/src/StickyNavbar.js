@@ -36,12 +36,18 @@ const StickyNavbar = () => {
       <div className="md:container mx-4 md:mx-auto navbar-font">
         {/* Your navbar content */}
         <div className="flex justify-between items-center">
-        <div className="pl-8 md:flex space-x-4 md:space-x-8 hidden hover:text-black">
-            <a href="#Home">Home</a>
-            <a href="#About">About</a>
-            <a href="#Testimonials">Reviews</a>
+        <div className="pl-8 md:flex space-x-4 md:space-x-8 hidden">
+            <a href="#Home">
+              <p className="hover:text-blue-500">Home</p>
+            </a>
+            <a href="#About">
+              <p className="hover:text-blue-500">About</p>
+            </a>
+            <a href="#Testimonials">
+              <p className="hover:text-blue-500">Reviews</p>
+            </a>
           </div>
-          <div className="text-l md:text-xl font-bold">The Dylan Blake Experience</div>
+          <div className="text-l md:text-xl font-bold">High Value Mentors</div>
           <button
             className="custom-navbar-button hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             onClick={handleScrollToForm}

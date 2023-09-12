@@ -4,7 +4,7 @@
 
 .App {
   text-align: center;
-  font-family: 'Montserrat', Calibri, Arial;
+  font-family: 'Cinzel','Montserrat', Calibri, Arial;
 }
 
 .App-logo {
@@ -52,12 +52,10 @@
 }
 
 .navbar-font {
-  font-family: 'Montserrat', Calibri, Arial;
   color:#000000;
 }
 
 .intro-font {
-  font-family: 'Montserrat', Calibri, Arial;
   font-size: 24px;
 }
 
@@ -67,4 +65,12 @@
 
 .img-scale {
   transform: scale(.8);
+}
+
+.img-brighten {
+  filter: brightness(1.4);
+}
+
+.alert-border {
+  background-color: #DAAD44;
 }

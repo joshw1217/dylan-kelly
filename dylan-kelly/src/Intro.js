@@ -65,12 +65,12 @@ const Intro= () => {
         </div>
         <div className="md:w-1/2">
           {/* Title */}
-          <h2 className="text-3xl font-bold mb-4">Welcome to Our Website</h2>
+          
 
           {/* Paragraph */}
-          <p className="text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nunc
-            quis libero congue iaculis. Phasellus scelerisque nunc eu aliquam.
+          <p className="text-gray-800 text-3xl">Are you wanting to transform your dating life and attract the woman of your dreams? I have you covered. </p>
+          <p className="text-gray-600 text-2xl mt-8">
+          Through my Masterclass Program you will be empowered with the skills, confidence, and style of a high value man. A man who is sure of himself, who has purpose, and has no problem attracting the right women into his life. Ready to get started?
           </p>
           <button
           className="bg-gray-500 my-8 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"

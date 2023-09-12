@@ -32,14 +32,14 @@ const Testimonials = () => {
   return (
     <section id="Testimonials" className="bg-gray-300 py-20">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-8">Testimonials</h2>
+        <h2 className="text-5xl font-bold mb-8">Testimonials</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {displayedTestimonials.map((testimonial) => (
         <div className="bg-white rounded-lg shadow-md p-6" key={testimonial.id}>
             <img
               src={testimonial.img}
               alt="Testimonial 3"
-              className="w-24 h-24 rounded-full mx-auto mb-4"
+              className="img-brighten w-24 h-24 rounded-full mx-auto mb-4"
             />
             {/* Review */}
             <p className="text-gray-700 text-center">
