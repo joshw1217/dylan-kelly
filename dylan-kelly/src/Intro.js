@@ -15,7 +15,7 @@ const Intro= () => {
 
   return (
     <section id="Home" className="bg-white">
-      <div className="relative bg-cover bg-top h-screen" style={{ backgroundImage: 'url("cover.jpg")' }}>
+      <div className="lg:mt-0 mt-8 relative bg-cover bg-top h-screen" style={{ backgroundImage: 'url("cover.jpg")' }}>
         <div className="absolute top-80 left-20 sm:left-0 sm-top:40 sm:w-1/3 text-white text-3xl font-bold p-8 w-2/3">
             I'm Dylan Blake, and I help men become high value.
         </div>
@@ -36,7 +36,7 @@ const Intro= () => {
           It’s time to become the man you always knew you were capable of becoming. 
           </p>
           <button
-          className="bg-gray-500 mt-8 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="custom-navbar-button my-8 hover:bg-amber-300 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           type="submit"
           onClick={handleScrollToForm}
         >
@@ -65,15 +65,15 @@ const Intro= () => {
         </div>
         <div className="md:w-1/2">
           {/* Title */}
-          
+          <h2 className="mt-4 text-5xl font-bold mb-4">Elevate your value.</h2>
 
           {/* Paragraph */}
-          <p className="text-gray-800 text-3xl">Are you wanting to transform your dating life and attract the woman of your dreams? I have you covered. </p>
+          <p className="text-gray-800 text-3xl mt-8">Are you wanting to transform your dating life and attract the woman of your dreams? I have you covered. </p>
           <p className="text-gray-600 text-2xl mt-8">
           Through my Masterclass Program you will be empowered with the skills, confidence, and style of a high value man. A man who is sure of himself, who has purpose, and has no problem attracting the right women into his life. Ready to get started?
           </p>
           <button
-          className="bg-gray-500 my-8 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="custom-navbar-button my-8 hover:bg-amber-300 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           type="submit"
           onClick={handleScrollToForm}
         >

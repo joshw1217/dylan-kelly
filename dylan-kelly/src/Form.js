@@ -106,13 +106,13 @@ const Form = () => {
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="challenges"
           type="text"
-          placeholder="What are your current challenges right now?"
+          placeholder="What are your current challenges?"
         />
       </div>
       
       <div className="mb-6 mt-10">
         <button
-          className="custom-navbar-button hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="custom-navbar-button hover:bg-amber-300 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           type="submit"
           onClick={handleFormSubmit}
         >
@@ -123,7 +123,7 @@ const Form = () => {
      <div className="flex justify-center items-end max-height mb-20 md:w-1/2 md:ml-0 ml-4">
      {isAlertVisible && (
           <Alert 
-          message="Form submitted successfully!" 
+          message="Thanks for submitting. We will contact you shortly." 
           onClose={handleAlertClose} />
         )}
      </div>

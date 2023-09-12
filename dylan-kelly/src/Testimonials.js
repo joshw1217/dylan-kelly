@@ -6,9 +6,9 @@ const Testimonials = () => {
 
   // Testimonials data
   const testimonials = [
-    { id: 1, text: '“Dating has never been an issue for me. Dating women I really like has. What I realized from Dylan’s masterclass program is that I was marketing myself to low value women. Together we crafted a unique look I’ve been pumped on. We also worked through some things that were holding me back from dating better women. Now I know what I want and it’s made the world of difference to me!”', img: 'codyM.jpeg', alias: 'Cody M.', job: 'President of Sales, Elite Energy'},
-    { id: 2, text: '“After a traumatic breakup I felt I was unloveable. I grew my hair out and wore baggy clothing because I was hiding who I was. Now I feel free to express who I am and woman have really taken notice. I’ve gone from my dating life being almost no existent to going out a few times a week with women Im really interested in. I can’t thank Dylan enough!”', img: 'frankT.jpeg', alias: 'Frank T.', job: 'Owns Medicare business'},
-    { id: 3, text: '“ Dylan is a wizard! After my divorce I hadn’t a clue of how to date in todays world. From dating apps to creating attraction, he broke it all down in such an easy way. I value him as a friend and am so excited to continue to use everything he’s taught me.”', img: 'zachO.jpeg', alias: 'Zachary O.', job: 'Programmer, Adobe'},
+    { id: 1, text: '“Dating has never been an issue for me. Dating women I really like has. What I realized from Dylan’s masterclass program is that I was marketing myself to low value women. Together we crafted a unique look I’ve been pumped on. We also worked through some things that were holding me back from dating better women. Now I know what I want and it’s made the world of difference to me!”', img: 'codyM.jpeg', alias: 'Cody M.', first: 'Cody', job: 'President of Sales, Elite Energy'},
+    { id: 2, text: '“After a traumatic breakup I felt I was unloveable. I grew my hair out and wore baggy clothing because I was hiding who I was. Now I feel free to express who I am and woman have really taken notice. I’ve gone from my dating life being almost no existent to going out a few times a week with women Im really interested in. I can’t thank Dylan enough!”', img: 'frankT.jpeg', alias: 'Frank T.', first: 'Frank', job: 'Owns Medicare business'},
+    { id: 3, text: '“ Dylan is a wizard! After my divorce I hadn’t a clue of how to date in todays world. From dating apps to creating attraction, he broke it all down in such an easy way. I value him as a friend and am so excited to continue to use everything he’s taught me.”', img: 'zachO.jpeg', alias: 'Zachary O.', first: 'Zachary', job: 'Programmer, Adobe'},
     { id: 4, text: 'Vestibulum vehicula feugiat leo, a rhoncus libero.' + 
     'Nulla facilisi. Duis consectetur commodo felis, vel fermentum urna aliquet sitamet.', img: 'IMG_4960.JPG'},
     { id: 5, text: 'Vestibulum vehicula feugiat leo, a rhoncus libero.' + 
@@ -41,19 +41,19 @@ const Testimonials = () => {
               alt="Testimonial 3"
               className="img-brighten w-24 h-24 rounded-full mx-auto mb-4"
             />
-            {/* Review */}
+            <p className="text-gray-700 custom-text-color font-bold text-center my-2">Meet {testimonial.first}</p>
             <p className="text-gray-700 text-center">
               {testimonial.text}
             </p>
             <div className="px-6 py-4 flex justify-between items-end">
-              <p className="custom-text-color text-sm">~ {testimonial.alias}</p>
-              <p className="custom-text-color text-sm">{testimonial.job}</p>
+              <p className="custom-text-color font-bold text-sm">~ {testimonial.alias}</p>
+              <p className="custom-text-color font-bold text-sm">{testimonial.job}</p>
               </div>
             </div>
       ))}
       </div>
       
-      <button className="bg-gray-500 hover:bg-black text-white font-bold mt-8 py-2 px-4 rounded" onClick={() => setExpanded(!expanded)}>
+      <button className="custom-navbar-button hover:bg-amber-300 text-white font-bold mt-8 py-2 px-4 rounded" onClick={() => setExpanded(!expanded)}>
         {expanded ? 'Collapse' : 'Expand'}
       </button>
       </div>
