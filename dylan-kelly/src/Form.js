@@ -2,15 +2,43 @@ import React, { useState } from 'react';
 import Alert from './Alert';
 
 const Form = () => {
+
   const [isAlertVisible, setAlertVisible] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    location: '',
+    age: '',
+    occupation: '',
+    challenges: ''
+  });
+
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
     // Perform form submission logic here
 
+    fetch('https://sheetdb.io/api/v1/73q62wp1b3flj', {
+    method: 'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+
     // Show the alert after form submission
     setAlertVisible(true);
+    console.log(formData);
   };
 
   const handleAlertClose = () => {
@@ -31,6 +59,10 @@ const Form = () => {
           id="name"
           type="text"
           placeholder="Your name"
+          name='name'
+          value={formData.name}
+          onChange={handleChange}
+          required
         />
       </div>
       <div className="mb-4">
@@ -42,6 +74,10 @@ const Form = () => {
           id="email"
           type="text"
           placeholder="Your email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
         />
       </div>
       <div className="mb-4">
@@ -53,6 +89,10 @@ const Form = () => {
           id="phone"
           type="text"
           placeholder="Your phone number"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          required
         />
       </div>
       <div className="mb-4">
@@ -64,6 +104,10 @@ const Form = () => {
           id="location"
           type="text"
           placeholder="Where do you live?"
+          name="location"
+          value={formData.location}
+          onChange={handleChange}
+          required
         />
       </div>
       <div className="mb-4">
@@ -75,6 +119,9 @@ const Form = () => {
           id="age"
           type="text"
           placeholder="How old are you?"
+          name="age"
+          value={formData.age}
+          onChange={handleChange}
         />
       </div>
       <label className="block text-white md:text-gray-700 text-sm font-bold mb-2" htmlFor="occupation">
@@ -84,6 +131,8 @@ const Form = () => {
         className="block w-full p-2 mb-4 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
         id="occupation"
         name="occupation"
+        value={formData.occupation}
+        onChange={handleChange}
       >
         <option value="">What do you do for work?</option>
         <option value="Tech">Tech</option>
@@ -107,6 +156,9 @@ const Form = () => {
           id="challenges"
           type="text"
           placeholder="What are your current challenges?"
+          name="challenges"
+          value={formData.challenges}
+          onChange={handleChange}
         />
       </div>
       
