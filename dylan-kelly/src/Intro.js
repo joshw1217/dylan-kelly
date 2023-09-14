@@ -20,19 +20,19 @@ const Intro= () => {
             I'm Dylan Blake, and I help men become high value.
         </div>
       </div>
-      <div className="container mx-auto flex flex-col md:flex-row items-center">
-        <div className="md:w-1/2">
+      <div className="container flex flex-col md:flex-row md:mx-auto items-center">
+        <div className="md:w-1/2 w-full">
           {/* Title */}
-          <h2 className="mt-4 text-5xl font-bold mb-4">You deserve to be seen!</h2>
+          <h2 className="mt-4 md:text-5xl text-2xl font-bold mb-4">You deserve to be seen!</h2>
 
           {/* Paragraph */}
-          <p className="text-gray-600 mt-8 text-2xl">
+          <p className="text-gray-600 mt-8 md:text-2xl mx-8 text-md">
           Most men are invisible to the world, to their peers, and of course beautiful women. They blend into the back ground and settle for a life they hate waking up to.  
           </p>
-          <p className="text-gray-600 mt-4 text-2xl">
+          <p className="text-gray-600 mt-4 md:text-2xl mx-8 text-md">
           I’ve been that man and have made it my life’s mission to help men just like you become irresistible. That when you walk into a room women notice, respect, and admire you as someone of high value. 
           </p>
-          <p className="text-gray-600 mt-4 text-2xl">
+          <p className="text-gray-600 mt-4 md:text-2xl mx-8 text-md">
           It’s time to become the man you always knew you were capable of becoming. 
           </p>
           <button
@@ -68,8 +68,8 @@ const Intro= () => {
           <h2 className="mt-4 text-5xl font-bold mb-4">Elevate your value.</h2>
 
           {/* Paragraph */}
-          <p className="text-gray-800 text-3xl mt-8">Are you wanting to transform your dating life and attract the woman of your dreams? I have you covered. </p>
-          <p className="text-gray-600 text-2xl mt-8">
+          <p className="text-gray-800 md:text-3xl text-md mt-8 mx-8 ">Are you wanting to transform your dating life and attract the woman of your dreams? I have you covered. </p>
+          <p className="text-gray-800 md:text-3xl text-md mt-8 mx-8">
           Through my Masterclass Program you will be empowered with the skills, confidence, and style of a high value man. A man who is sure of himself, who has purpose, and has no problem attracting the right women into his life. Ready to get started?
           </p>
           <button

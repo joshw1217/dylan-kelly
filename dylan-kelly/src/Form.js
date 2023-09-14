@@ -20,6 +20,32 @@ const Form = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  /* Occupation dropdown variables and logic */
+  const [occupationChosen, setOccupationChosen] = useState(false);
+  const handleOccupationChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    setOccupationChosen(true);
+  };
+
+
+  /* Location dropdown variables and logic */
+  const usStates = [
+    'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware',
+    'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
+    'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri',
+    'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina',
+    'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota',
+    'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming',
+  ];
+  const [stateChosen, setStateChosen] = useState(false);
+
+  const handleStateChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    setStateChosen(true);
+  };
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
@@ -99,16 +125,20 @@ const Form = () => {
         <label className="block text-white md:text-gray-700 text-sm font-bold mb-2" htmlFor="location">
           Location
         </label>
-        <input
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="location"
-          type="text"
-          placeholder="Where do you live?"
+        <select
+          className={stateChosen ? "block w-full p-2 mb-4 text-black border rounded shadow appearance-none focus:outline-none focus:shadow-outline" : "block w-full p-2 mb-4 text-gray-400 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"}          id="location"
           name="location"
           value={formData.location}
-          onChange={handleChange}
+          onChange={handleStateChange}
           required
-        />
+          >
+          <option value="" hidden disabled>Select a state</option>
+          {usStates.map((state) => (
+          <option key={state} value={state}>
+          {state}
+          </option>
+        ))}
+        </select>
       </div>
       <div className="mb-4">
         <label className="block text-white md:text-gray-700 text-sm font-bold mb-2" htmlFor="age">
@@ -128,13 +158,13 @@ const Form = () => {
         Occupation
       </label>
       <select
-        className="block w-full p-2 mb-4 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+        className={occupationChosen ? "block w-full p-2 mb-4 text-black border rounded shadow appearance-none focus:outline-none focus:shadow-outline" : "block w-full p-2 mb-4 text-gray-400 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"}
         id="occupation"
         name="occupation"
         value={formData.occupation}
-        onChange={handleChange}
+        onChange={handleOccupationChange}
       >
-        <option value="">What do you do for work?</option>
+        <option value="" disabled hidden>What do you do for work?</option>
         <option value="Tech">Tech</option>
         <option value="Health">Health</option>
         <option value="Business">Business</option>

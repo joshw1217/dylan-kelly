@@ -35,7 +35,7 @@ const Testimonials = () => {
         <h2 className="text-5xl font-bold mb-8">Testimonials</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {displayedTestimonials.map((testimonial) => (
-        <div className="bg-white rounded-lg shadow-md p-6" key={testimonial.id}>
+        <div className="bg-white rounded-lg shadow-md p-6 md:mx-0 mx-4" key={testimonial.id}>
             <img
               src={testimonial.img}
               alt="Testimonial 3"
