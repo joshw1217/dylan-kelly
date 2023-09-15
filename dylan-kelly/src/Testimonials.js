@@ -30,9 +30,9 @@ const Testimonials = () => {
 
 
   return (
-    <section id="Testimonials" className="bg-gray-300 py-20">
+    <section id="Testimonials" className="testimonial-background rounded-xl shadow-md py-20">
       <div className="container mx-auto">
-        <h2 className="text-5xl font-bold mb-8">Testimonials</h2>
+        <h2 className="text-5xl font-bold mb-8 text-amber-400">Testimonials</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {displayedTestimonials.map((testimonial) => (
         <div className="bg-white rounded-lg shadow-md p-6 md:mx-0 mx-4" key={testimonial.id}>
@@ -53,9 +53,11 @@ const Testimonials = () => {
       ))}
       </div>
       
+      
+      {/* TODO: Uncomment this button to allow expansion of testimonials
       <button className="custom-navbar-button hover:bg-amber-300 text-white font-bold mt-8 py-2 px-4 rounded" onClick={() => setExpanded(!expanded)}>
-        {expanded ? 'Collapse' : 'Expand'}
-      </button>
+        {expanded ? 'See less' : 'See more'}
+      </button>*/}
       </div>
     </section>
   );
