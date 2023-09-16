@@ -30,6 +30,7 @@ const Form = () => {
 
 
   /* Location dropdown variables and logic */
+  /* Commented out because state field was removed
   const usStates = [
     'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware',
     'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
@@ -44,12 +45,11 @@ const Form = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
     setStateChosen(true);
-  };
+  };*/
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    // Perform form submission logic here
 
     fetch('https://sheetdb.io/api/v1/73q62wp1b3flj', {
     method: 'POST',
@@ -64,7 +64,7 @@ const Form = () => {
 
     // Show the alert after form submission
     setAlertVisible(true);
-    console.log(formData);
+  //  console.log(formData);
   };
 
   const handleAlertClose = () => {
@@ -73,9 +73,9 @@ const Form = () => {
 
 
   return (
-    <div className="mx-auto flex flex-col md:flex-row items-left bg-cover bg-top h-1/2" style={{ backgroundImage: 'url("IMG_4966.JPG")' }}>
+    <div className={isAlertVisible ? "mx-auto flex flex-col md:flex-row items-left bg-cover bg-top md:h-[92vh] h-auto" : "mx-auto flex flex-col md:flex-row items-left bg-cover bg-top h-[92vh]" }style={{ backgroundImage: 'url("IMG_4966.JPG")' }}>
     <form className="md:w-1/2 max-w-md mx-auto p-4 mt-20" id="form-section" >
-        <h2 className="text-white text-5xl font-bold mb-4">The new you is just a click away</h2>
+        <h2 className="other-font text-white text-5xl font-bold mb-4">The new you is just a click away</h2>
       <div className="mb-4">
         <label className="block text-white md:text-gray-700 text-sm font-bold mb-2 mt-10" htmlFor="name">
           Name
@@ -121,7 +121,8 @@ const Form = () => {
           required
         />
       </div>
-      <div className="mb-4">
+      
+      {/*<div className="mb-4">
         <label className="block text-white md:text-gray-700 text-sm font-bold mb-2" htmlFor="location">
           Location
         </label>
@@ -139,7 +140,7 @@ const Form = () => {
           </option>
         ))}
         </select>
-      </div>
+          </div> */}
       <div className="mb-4">
         <label className="block text-white md:text-gray-700 text-sm font-bold mb-2" htmlFor="age">
           Age
@@ -177,20 +178,7 @@ const Form = () => {
         <option value="Other">Other</option>
   
       </select>
-      <div className="mb-4">
-        <label className="block text-white md:text-gray-700 text-sm font-bold mb-2" htmlFor="challenges">
-          Challenges?
-        </label>
-        <input
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="challenges"
-          type="text"
-          placeholder="What are your current challenges?"
-          name="challenges"
-          value={formData.challenges}
-          onChange={handleChange}
-        />
-      </div>
+      
       
       <div className="mb-6 mt-10">
         <button

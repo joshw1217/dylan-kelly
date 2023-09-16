@@ -7,6 +7,14 @@
   font-family: 'Cinzel','Montserrat', Calibri, Arial;
 }
 
+.header-font {
+  font-family: 'Montserrat', Calibri, Arial;
+}
+
+.other-font {
+  font-family: 'Proxima Nova';
+}
+
 
 .custom-navbar-button {
   background-color: #DAAD44;
@@ -41,5 +49,5 @@
 }
 
 .testimonial-background {
-  background-color: #74898c;
+  background-color: #a7babd;
 }

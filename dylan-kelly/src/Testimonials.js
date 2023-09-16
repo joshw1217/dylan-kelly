@@ -32,23 +32,24 @@ const Testimonials = () => {
   return (
     <section id="Testimonials" className="testimonial-background rounded-xl shadow-md py-20">
       <div className="container mx-auto">
-        <h2 className="text-5xl font-bold mb-8 text-amber-400">Testimonials</h2>
+        <h2 className="other-font md:text-5xl text-4xl font-bold mb-8 text-black">TESTIMONIALS</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {displayedTestimonials.map((testimonial) => (
-        <div className="bg-white rounded-lg shadow-md p-6 md:mx-0 mx-4" key={testimonial.id}>
+        <div className="flex flex-col items-center bg-white rounded-lg shadow-md p-6 md:mx-0 mx-4" key={testimonial.id}>
             <img
               src={testimonial.img}
-              alt="Testimonial 3"
+              alt="Testimonial"
               className="img-brighten w-24 h-24 rounded-full mx-auto mb-4"
             />
-            <p className="text-gray-700 custom-text-color font-bold text-center my-2">Meet {testimonial.first}</p>
-            <p className="text-gray-700 text-center">
+            <div className="flex-grow flex flex-col justify-between">
+              <div>
+            <p className="other-font custom-text-color font-bold text-center text-xl my-2">Meet {testimonial.first}</p>
+            <p className="header-font text-gray-700 text-center">
               {testimonial.text}
             </p>
-            <div className="px-6 py-4 flex justify-between items-end">
-              <p className="custom-text-color font-bold text-sm">~ {testimonial.alias}</p>
-              <p className="custom-text-color font-bold text-sm">{testimonial.job}</p>
-              </div>
+            </div>
+            <p className="py-4 other-font custom-text-color font-bold text-md">{testimonial.job}</p>
+            </div>
             </div>
       ))}
       </div>
