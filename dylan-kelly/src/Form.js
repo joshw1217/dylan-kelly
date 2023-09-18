@@ -73,7 +73,7 @@ const Form = () => {
 
 
   return (
-    <div className={isAlertVisible ? "mx-auto flex flex-col md:flex-row items-left bg-cover bg-top md:h-[92vh] h-auto" : "mx-auto flex flex-col md:flex-row items-left bg-cover bg-top h-[92vh]" }style={{ backgroundImage: 'url("IMG_4966.JPG")' }}>
+    <div className={isAlertVisible ? "mx-auto flex flex-col md:flex-row items-left bg-cover bg-top md:h-[92vh] h-screen" : "mx-auto flex flex-col md:flex-row items-left bg-cover bg-top h-[92vh]" }style={{ backgroundImage: 'url("IMG_4966.JPG")' }}>
     <form className="md:w-1/2 max-w-md mx-auto p-4 mt-20" id="form-section" >
         <h2 className="other-font text-white text-5xl font-bold mb-4">The new you is just a click away</h2>
       <div className="mb-4">
