@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Alert from './Alert';
 
 const Form = () => {
@@ -8,10 +8,10 @@ const Form = () => {
     name: '',
     email: '',
     phone: '',
-    location: '',
+  //  location: '',
     age: '',
     occupation: '',
-    challenges: ''
+  //  challenges: ''
   });
 
 
@@ -28,6 +28,27 @@ const Form = () => {
     setOccupationChosen(true);
   };
 
+
+  const [isFormValid, setIsFormValid] = useState(false);
+  const validateForm = () => {
+    // Check if all required fields are filled out
+    if (
+      formData.name &&
+      formData.email &&
+      formData.phone &&
+      formData.age &&
+      formData.occupation
+    ) {
+      setIsFormValid(true);
+    } else {
+      setIsFormValid(false);
+    }
+  };
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    validateForm();
+  }, [formData]);
 
   /* Location dropdown variables and logic */
   /* Commented out because state field was removed
@@ -49,21 +70,26 @@ const Form = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    if (isFormValid) {
+      fetch('https://sheetdb.io/api/v1/73q62wp1b3flj', {
+      method: 'POST',
+      headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then((response) => response.json())
+    .then((data) => console.log(data));
 
+      // Show the alert after form submission
+      setAlertVisible(true);
+      // Your form submission logic here
+    } else {
+      // Handle invalid form submission
+      alert('Please fill out all required fields.');
+    }
 
-    fetch('https://sheetdb.io/api/v1/73q62wp1b3flj', {
-    method: 'POST',
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formData)
-  })
-  .then((response) => response.json())
-  .then((data) => console.log(data));
-
-    // Show the alert after form submission
-    setAlertVisible(true);
   //  console.log(formData);
   };
 
@@ -73,7 +99,7 @@ const Form = () => {
 
 
   return (
-    <div className={isAlertVisible ? "mx-auto flex flex-col md:flex-row items-left bg-cover bg-top md:h-[92vh] h-screen" : "mx-auto flex flex-col md:flex-row items-left bg-cover bg-top h-[92vh]" }style={{ backgroundImage: 'url("IMG_4966.JPG")' }}>
+    <div className={isAlertVisible ? "mx-auto flex flex-col md:flex-row items-left bg-cover bg-top md:h-[92vh] h-[140vh]" : "mx-auto flex flex-col md:flex-row items-left bg-cover bg-top h-[92vh]" }style={{ backgroundImage: 'url("IMG_4966.JPG")' }}>
     <form className="md:w-1/2 max-w-md mx-auto p-4 mt-20" id="form-section" >
         <h2 className="other-font text-white text-5xl font-bold mb-4">The new you is just a click away</h2>
       <div className="mb-4">
@@ -190,7 +216,7 @@ const Form = () => {
         </button>
       </div>
     </form>
-     <div className="flex justify-center items-end max-height mb-20 md:w-1/2 md:ml-0 ml-4">
+     <div className="flex justify-center items-end max-height md:mb-20 mt-8 md:w-1/2 md:ml-0 ml-4">
      {isAlertVisible && (
           <Alert 
           message="Thanks for submitting. We will contact you shortly." 
