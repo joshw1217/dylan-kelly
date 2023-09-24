@@ -27,10 +27,10 @@ const Intro= () => {
 
           {/* Paragraph */}
           <p className=" header-font text-gray-600 mt-8 md:text-2xl mx-8 text-md">
-          Most men are invisible to the world, to their peers, and of course beautiful women. They blend into the back ground and settle for a life they hate waking up to.  
+          Most men are invisible to the world, their peers, and of course, beautiful women. They blend into the background and settle for a life they hate waking up to. 
           </p>
           <p className="header-font text-gray-600 mt-4 md:text-2xl mx-8 text-md">
-          I’ve been that man and have made it my life’s mission to help men just like you become irresistible. That when you walk into a room women notice, respect, and admire you as someone of high value. 
+          I’ve been that man, and have made it my life’s mission to help men just like you become irresistible - so when you walk into a room women will notice, respect, and admire you as someone of high value. 
           </p>
           <p className="header-font text-gray-600 mt-4 md:text-2xl mx-8 text-md">
           It’s time to become the man you always knew you were capable of becoming. 
@@ -70,7 +70,7 @@ const Intro= () => {
           {/* Paragraph */}
           <p className="header-font text-gray-600 md:text-2xl text-md mt-8 mx-8 ">Are you wanting to transform your dating life and attract the woman of your dreams? I have you covered. </p>
           <p className="header-font text-gray-600 md:text-2xl text-md mt-8 mx-8">
-          Through my Masterclass Program you will be empowered with the skills, confidence, and style of a high value man. A man who is sure of himself, who has purpose, and has no problem attracting the right women into his life. Ready to get started?
+          Through my Masterclass Program you will be empowered with the skills, confidence, and style of a high-value man. A man who is sure of himself, who has purpose, and has no problem attracting the right women into his life. Ready to get started?
           </p>
           <button
           className="custom-navbar-button my-8 md:mb-0 mb-16 hover:bg-amber-300 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
